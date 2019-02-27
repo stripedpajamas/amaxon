@@ -15,6 +15,7 @@
   "author": "Peter Squicciarini <stripedpajamas273@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "aws-sdk": "^2.411.0",
     "got": "^9.6.0",
     "node-html-parser": "^1.1.12"
   }
