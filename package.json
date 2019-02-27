@@ -1,0 +1,21 @@
+{
+  "name": "amaxon",
+  "version": "1.0.0",
+  "description": "price checker",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "amazon",
+    "price",
+    "scraper"
+  ],
+  "author": "Peter Squicciarini <stripedpajamas273@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^9.6.0",
+    "node-html-parser": "^1.1.12"
+  }
+}
