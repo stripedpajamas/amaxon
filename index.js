@@ -1,3 +1,4 @@
+const Url = require('url')
 const AWS = require('aws-sdk')
 const got = require('got')
 const { parse } = require('node-html-parser')
@@ -11,6 +12,10 @@ const { TABLE_NAME } = process.env
 
 async function getPrice(url) {
   try {
+    const parsed = new Url.URL(url)
+    if (!parsed.hostname.includes('amazon.com')) {
+      throw new Error('not an amazon url')
+    }
     const response = await got(url)
     const parsed = parse(response.body)
     const priceSpan = parsed.querySelector('#priceblock_ourprice')
